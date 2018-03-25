@@ -68,7 +68,7 @@ public class InsulinCoreTest {
     @Test
     public void testInsulinForCorrection() {
         System.out.println("insulinForCorrection");
-        double BMs = 9.9;
+        String BMs = "9.9";
         InsulinCore instance = new InsulinCore();
         int expResult = 0;
         int result = instance.insulinForCorrection(BMs);
@@ -78,7 +78,7 @@ public class InsulinCoreTest {
     @Test
     public void testInsulinForCorrection2() {
         System.out.println("insulinForCorrection");
-        double BMs = 10.0;
+        String BMs = "10.0";
         InsulinCore instance = new InsulinCore();
         int expResult = 1;
         int result = instance.insulinForCorrection(BMs);
@@ -88,7 +88,7 @@ public class InsulinCoreTest {
     @Test
     public void testInsulinForCorrection3() {
         System.out.println("insulinForCorrection");
-        double BMs = 4;
+        String BMs = "4";
         InsulinCore instance = new InsulinCore();
         int expResult = 0;
         int result = instance.insulinForCorrection(BMs);
@@ -98,7 +98,7 @@ public class InsulinCoreTest {
     @Test
     public void testInsulinForCorrection4() {
         System.out.println("insulinForCorrection");
-        double BMs = 33.4;
+        String BMs = "33.4";
         InsulinCore instance = new InsulinCore();
         int expResult = 8;
         int result = instance.insulinForCorrection(BMs);
