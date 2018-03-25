@@ -46,7 +46,7 @@ public class InsulinCalculatorGUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Insuline Administration Calculator");
+        setTitle("Insulin Administration Calculator");
 
         BMReadingText.setText("BM reading:");
 

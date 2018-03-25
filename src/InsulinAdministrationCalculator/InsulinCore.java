@@ -11,27 +11,7 @@ package InsulinAdministrationCalculator;
  */
 public class InsulinCore {
    
-    private double bMs;
-    private int carbs;
-    
-    
- 
-    public void setBMs(double amount){
-        this.bMs = amount;
-    }
-    
-    public double getBMs(){
-        return this.bMs;
-    }
-    
-    public void setCarbs(int amount){
-        this.carbs = amount;
-    }
-    
-    public int getCarbs(){
-        return this.carbs;
-    }
-    
+   
     //1 unit of insulin per 10g of carbs
     public int insulinForCarbs(String s){
         double num = this.checkNum(s);
