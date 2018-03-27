@@ -1,6 +1,7 @@
 
 package GUI;
 
+
 import InsulinAdministrationCalculator.InsulinCore;
 import javax.swing.JOptionPane;
 
@@ -121,7 +122,7 @@ public class InsulinCalculatorGUI extends javax.swing.JFrame {
                 .addComponent(insulinAmountOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +135,7 @@ public class InsulinCalculatorGUI extends javax.swing.JFrame {
                 .addGap(26, 26, 26))
         );
 
-        jButton2.setText("Administration Guidelines");
+        jButton2.setText("Dosage guidelines and information");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -198,7 +199,7 @@ public class InsulinCalculatorGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 455, Short.MAX_VALUE)
+            .addGap(0, 491, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -219,11 +220,13 @@ public class InsulinCalculatorGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        JOptionPane.showMessageDialog(null, "feature not yet available!");
+        CommonFoodCarbs s = new CommonFoodCarbs();
+        s.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JOptionPane.showMessageDialog(null, "feature not yet available!");
+        AdministrationGuidelines a = new AdministrationGuidelines();
+        a.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void insulinAmountOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insulinAmountOutputActionPerformed

@@ -1,13 +1,33 @@
 
 package InsulinAdministrationCalculator;
 
+import java.util.prefs.Preferences;
+
 /**
  *
  * @author Sergiu Borlovan
  */
 public class InsulinCore {
    
-   
+    Preferences systemPref = Preferences.userRoot();   
+
+    private String notes;
+
+    public InsulinCore(){
+        this.notes = systemPref.get("InsulinCoreNotes", "");
+    }   
+    
+    public String getNotes(){
+        String s = systemPref.get("InsulinCoreNotes", notes);
+        return s;
+    }
+    
+    public void setNotes(String s){
+        notes = s;
+        systemPref.put("InsulinCoreNotes", s);
+    }
+    
+    
     //1 unit of insulin per 10g of carbs
     public int insulinForCarbs(String s){
         double num = this.checkNum(s);
@@ -37,16 +57,16 @@ public class InsulinCore {
     
     //BM readings of 33.3 and over are displayed as "hi".
     //The lowest possible value is assumed, which is 33.4
-    public double checkNum(String num){
-        if (num.isEmpty()){
+    public double checkNum(String s){
+        if (s.isEmpty()){
             return 0;
         }
         else{
-            if (num.equals("hi")){
+            if (s.equals("hi")){
                 return 33.4;
             }
             else{
-                return Double.valueOf(num);
+                return Double.valueOf(s);
             }
 
         }
